@@ -1,0 +1,43 @@
+{
+  profiles: [
+   { userID:"u1", name:"", address:" 123 Main street, Toronto ON",
+	 restrictions:[ 
+	   {restrID:"x1-1", ingr_ref:"p1-1", name:"Restriction 1"}
+	 ]},{ userID:"u1", name:"", address:"",
+				restrictions:[ 
+		{restrID:"x1-1", p:"p1-1", name:"Restriction 2"}
+	 ]}		
+  ], stores: [
+ {storeID:"s1", p:"s0", name:"Store 1", 
+    categs: [  
+   {catID:"k1-1", p:"k0", name:"Category 1", prods: [  
+	 {prodID:"p1-1", p:"1", name:"Product 1", 
+	   recalls: [  
+	     {recallID:"r1-1", p:"p1-1", name:"Recall 1", alert:1,}
+	                                                 
+	   ], ingrs: [  
+	     {ingrID:"i1-1", p:"i1", name:"Ingredient 1", alert:1 },
+	                                                     
+	   ], nutr: [  
+	     {factsID:"f1-1", p:"p1-1", name:"Fact 1", alert:1},      
+	   ]                                                  
+	 },  // product        
+	 ], ads: [ 
+		 {adID:"a1-1", p:"a1", name:"Ad 1", }        
+  ]}	 // category
+ ]}	 // store
+   
+], events: [ {eventID: "e1", date:"2013-12-3",   
+      
+  list: [  
+    {slistID:"l1-1", p:"r1", name:"List item 1", },        
+    
+], cart: [  
+    {cartID:"g1-1", p:"t1", name:"Cart Item 1",  points:"2" },      
+    
+], transacts: [  
+    {trID:"t1-1", p:"t1", name:"Transact 1", store:"s1", sum:"132.12", points:"11"},        
+		
+] } ]
+
+ }

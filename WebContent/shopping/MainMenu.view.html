@@ -1,0 +1,65 @@
+<template data-controller-name="shopping.MainMenu">
+	<div data-sap-ui-type="sap.m.Page" data-title="Main Menu">
+		<div data-sap-ui-aggregation="content">
+<script>
+function getControllerName() {
+	return "shopping.MainMenu";
+};
+
+function onBeforeShow(evt) {
+	this.getController().onBeforeShow(evt);
+};
+
+function referUs() {	
+	menuC.referUs();
+}
+function scan() {
+    window.open("Scan.html");
+//	appC.navTo("Scan", true, undefined, undefined);
+//	menuC.scan();
+}
+function profile() {
+	appC.navTo("Profile", true, undefined, undefined);
+//	menuC.profile();
+}
+function search() {	
+	appC.navTo("Search", true, undefined, undefined);
+}
+function recall() {	
+	menuC.recall();
+}
+function shoppingList() {	
+	menuC.shoppingList();
+}
+function sale() {
+	appC.navTo("Category", true, undefined, undefined);
+	
+//	menuC.sale();
+}
+function cart() {	
+	appC.navTo("Order", true, undefined, undefined);
+//	menuC.cart();
+}
+function support() {	
+	menuC.support();
+}
+
+</script>
+
+<img src="images/2.png" width="768" height="1280" alt="Main Menu" usemap="#mainMenuMap">
+
+<map name="mainMenuMap">
+  <area shape="rect" coords="-10,1,260,246" href="javascript:referUs();" alt="Profile"/>
+<area shape="rect" coords="269,507,511,766" href="javascript:scan();" alt="scan"/>
+<area shape="rect" coords="-10,1033,232,1261" href="javascript:profile();" alt="profile"/>
+<area shape="rect" coords="538,1035,765,1278" href="javascript:search();" alt="search"/>
+<area shape="rect" coords="512,501,764,776" href="javascript:recall();" alt="recall"/>
+<area shape="rect" coords="494,-4,762,245" href="javascript:shoppingList();" alt="shopping list"/>
+<area shape="rect" coords="223,774,556,1025" href="javascript:sale();" alt="sale"/>
+<area shape="rect" coords="235,251,568,502" href="javascript:cart();" alt="shopping cart"/>
+<area shape="rect" coords="12,496,264,771" href="javascript:support();" alt="support"/>
+</map>
+
+</div>
+</div>
+</template>
